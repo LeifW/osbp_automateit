@@ -26,7 +26,7 @@ end
 version = `gem list passenger --local`[/ \((.+?)\)/, 1].split(', ').sort.last
 passenger_path = File.dirname(`gem contents passenger --version #{version}`.split.first)
 ruby_path = nil
-ruby_paths = ["/opt/ruby-enterprise", "/usr/local", "/usr/bin"]
+ruby_paths = ["/opt/ruby-enterprise", "/usr/local", "/usr"]
 ruby_paths.each do |prefix|
   a_ruby_path = File.join(prefix, "bin", "ruby")
   if File.exist?(a_ruby_path)
